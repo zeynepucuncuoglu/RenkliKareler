@@ -32,7 +32,7 @@ public class ControlPanel extends JPanel {
 
         this.add(buttonPanel, BorderLayout.NORTH);
 
-        JLabel descriptionLabel = new JLabel("<html>Bos karelerin tümünü kirmizi ve mavi renklerle yle boyayiniz ki: Her sirada ve kolonda esit sayida kirmizi ve mavi kare bulunsun. Higbir sirada ve kolonda ayni renkli 3 kare yan yana bulunmasin. Aşağıdan zorluk derecesiz seçiniz </html>");
+        JLabel descriptionLabel = new JLabel("<html>Boş karelerin tümünü kirmizi ve mavi renklerle öyle boyayiniz ki: Her sirada ve kolonda eşit sayida kirmizi ve mavi kare bulunsun. Hiçbir sirada ve kolonda ayni renkli 3 kare yan yana bulunmasin. Aşağıdan zorluk derecesiz seçiniz </html>");
         descriptionLabel.setHorizontalAlignment(JLabel.CENTER);
         this.add(descriptionLabel, BorderLayout.CENTER);
 
