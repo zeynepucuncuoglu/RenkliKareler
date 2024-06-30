@@ -9,6 +9,7 @@ public class Game {
     private Grid solutionGrid;
     private Solver solver;
     private Difficulty difficulty;
+    private int score;
 
     public Game() {
         playGrid = new Grid();
@@ -16,6 +17,7 @@ public class Game {
         solver = new Solver();
         this.difficulty = Difficulty.SIMPLE;
         startNewGame();
+        this.score = 0;
     }
 
     public void setDifficulty(Difficulty difficulty) {
@@ -36,5 +38,17 @@ public class Game {
 
     public boolean isCompleted() {
         return Arrays.deepEquals(playGrid.getGrid(), solutionGrid.getGrid());
+    }
+
+    public boolean isValidSolution() {
+        return solver.isValidGrid(playGrid.getGrid());
+    }
+
+    public void updateSolutionWithUserGrid() {
+        for (int i = 0; i < playGrid.getSize(); i++) {
+            for (int j = 0; j < playGrid.getSize(); j++) {
+                solutionGrid.setCell(i, j, playGrid.getCell(i, j));
+            }
+        }
     }
 }

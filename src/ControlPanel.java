@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 public class ControlPanel extends JPanel {
     private GameUI gameUI;
 
+
     public ControlPanel(GameUI gameUI) {
         this.gameUI = gameUI;
         this.setLayout(new BorderLayout());
@@ -35,6 +36,8 @@ public class ControlPanel extends JPanel {
         JLabel descriptionLabel = new JLabel("<html>Boş karelerin tümünü kirmizi ve mavi renklerle öyle boyayiniz ki: Her sirada ve kolonda eşit sayida kirmizi ve mavi kare bulunsun. Hiçbir sirada ve kolonda ayni renkli 3 kare yan yana bulunmasin. Aşağıdan zorluk derecesiz seçiniz </html>");
         descriptionLabel.setHorizontalAlignment(JLabel.CENTER);
         this.add(descriptionLabel, BorderLayout.CENTER);
+
+
 
         JPanel difficultyPanel = new JPanel();
         difficultyPanel.setLayout(new GridLayout(1, 3));
@@ -69,4 +72,5 @@ public class ControlPanel extends JPanel {
 
         this.add(difficultyPanel, BorderLayout.SOUTH);
     }
+
 }

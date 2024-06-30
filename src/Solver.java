@@ -11,6 +11,7 @@ public class Solver {
         fillGrid(solution);
 
         int filledCells;
+
         switch (difficulty) {
             case SIMPLE:
                 filledCells = 18;
@@ -19,7 +20,7 @@ public class Solver {
                 filledCells = 12;
                 break;
             case HARD:
-                filledCells = 9;
+                filledCells = 1;
                 break;
             default:
                 filledCells = 18;
@@ -62,7 +63,7 @@ public class Solver {
         }
     }
 
-    private boolean isValidGrid(char[][] grid) {
+    public boolean isValidGrid(char[][] grid) {
         for (int i = 0; i < SIZE; i++) {
             if (!isValidLine(grid[i])) {
                 return false;
@@ -98,4 +99,6 @@ public class Solver {
 
         return redCount == 3 && blueCount == 3;
     }
+
+
 }

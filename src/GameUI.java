@@ -43,7 +43,16 @@ public class GameUI {
             JOptionPane.showMessageDialog(frame, "Tebrikler! Cevabınız Doğru.", "Success", JOptionPane.INFORMATION_MESSAGE);
             startNewGame();
         } else {
-            JOptionPane.showMessageDialog(frame, "Üzgünüm, cevabınız yanlış. Tekrar deneyiniz", "Error", JOptionPane.ERROR_MESSAGE);
+           // Solver solver = new Solver();
+            // int solutionCount = solver.countSolutions(game.getPlayGrid());
+
+            if (game.isValidSolution()) {
+                JOptionPane.showMessageDialog(frame, "Tebrikler! Cevabınız Doğru.", "Success", JOptionPane.INFORMATION_MESSAGE);
+                game.updateSolutionWithUserGrid();
+                startNewGame();
+            } else {
+                JOptionPane.showMessageDialog(frame, "Üzgünüm, cevabınız yanlış. Tekrar deneyiniz", "Error", JOptionPane.ERROR_MESSAGE);
+            }
         }
     }
 
